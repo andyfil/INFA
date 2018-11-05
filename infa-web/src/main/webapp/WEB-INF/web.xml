@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+          http://java.sun.com/xml/ns/javaee/web-app_3_1.xsd"
+    version="3.1">
+    <display-name>Servlet 3.1 Web Application</display-name>
+  <listener>
+    <listener-class>
+			org.springframework.web.context.request.RequestContextListener
+		</listener-class>
+  </listener>
+  <context-param>
+    <param-name>javax.faces.PROJECT_STAGE</param-name>
+    <param-value>Development</param-value>
+  </context-param>
+  <context-param>
+    <param-name>primefaces.THEME</param-name>
+    <param-value>hot-sneaks</param-value>
+  </context-param>
+  <context-param>
+    <param-name>primefaces.FONT_AWESOME</param-name>
+    <param-value>true</param-value>
+  </context-param>
+  <context-param>
+	<param-name>primefaces.UPLOADER</param-name>
+	<param-value>native</param-value>
+  </context-param>
+  <servlet>
+    <servlet-name>Faces Servlet</servlet-name>
+    <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Faces Servlet</servlet-name>
+    <url-pattern>*.xhtml</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>/pages/index.xhtml</welcome-file>
+  </welcome-file-list>
+ <!--  <filter>
+    <display-name>InventarioFilter</display-name>
+    <filter-name>InventarioFilter</filter-name>
+    <filter-class>com.capicua.inventario.web.application.InventarioFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>InventarioFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping> -->
+<error-page>  
+ <error-code>500</error-code>
+ <location>/pages/error.xhtml</location>
+</error-page>
+<error-page>
+ <error-code>404</error-code>
+ <location>/pages/error.xhtml</location>
+</error-page>
+<error-page>
+ <error-code>400</error-code>
+ <location>/pages/error.xhtml</location>
+</error-page>
+<error-page>
+   <exception-type>java.lang.Exception</exception-type>
+   <location>/pages/error.xhtml</location>
+ </error-page>
+<error-page>
+   <exception-type>com.sun.faces.context.AjaxExceptionHandlerImpl</exception-type>
+   <location>/pages/error.xhtml</location>
+ </error-page>
+ <error-page>
+   <exception-type> javax.faces.FacesException</exception-type>
+   <location>/pages/error.xhtml</location>
+ </error-page> 
+
+ <mime-mapping>  
+    <extension>woff2</extension>  
+    <mime-type>application/x-font-woff2</mime-type>  
+</mime-mapping>
+
+
+</web-app>

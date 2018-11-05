@@ -1,0 +1,31 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+	xmlns:cc="http://java.sun.com/jsf/composite"
+	xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:capicua="http://java.sun.com/jsf/composite/capicua"
+	xmlns:p="http://primefaces.org/ui" template="/templates/template-nomenu.xhtml">
+	
+
+	<ui:define name="content">
+
+				<h:form>
+				<div style="text-align: center;" > 
+					
+					
+				<br/>
+				<p style="font-size: 30px; font-weight: bold;">Ha ocurrido un error</p>
+				<h:graphicImage value="/resources/images/error.png" width="190" height="190"/>
+				
+				<br/>
+					
+				<br/>
+				<p:commandButton  value="Ir al Inicio" action="/pages/index.xhtml?faces-redirect=true"/>
+			
+</div>
+			</h:form>
+			
+	</ui:define>
+</ui:composition>

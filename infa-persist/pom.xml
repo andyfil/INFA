@@ -1,0 +1,44 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.cargaexpress.infa</groupId>
+    <artifactId>infa</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  
+  <artifactId>infa-persist</artifactId>
+  <name>Módulo de Persistencia</name>
+  <packaging>jar</packaging>
+  
+  <dependencies>
+		<dependency>
+			<groupId>com.cargaexpress.infa</groupId>
+			<artifactId>infa-common</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<!-- Hibernate dependencies -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+
+		
+		<!-- Spring data  -->
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-jpa</artifactId>
+			<version>${springdata.version}</version>
+		</dependency>
+
+		<!-- MySQL Java Connector dependency -->
+		<dependency>
+		    <groupId>mysql</groupId>
+		    <artifactId>mysql-connector-java</artifactId>
+		    <version>8.0.9-rc</version>
+		</dependency>
+
+	</dependencies>
+</project>
